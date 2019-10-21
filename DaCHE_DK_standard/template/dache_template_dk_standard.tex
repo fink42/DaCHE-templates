@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                Template                                  %%%
+%%%                             Version: 1.00                                %%%
+%%% 																		 %%%
+%%% 					DaCHE LaTeX template DK 4:3 						 %%%
+%%%                       Author: Nicolai Simonsen                           %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands
+	% Enable to place pictures inline with text
+		\newlength\myheight
+		\newlength\mydepth
+		\settototalheight\myheight{Xygp}
+		\settodepth\mydepth{Xygp}
+		\setlength\fboxsep{0pt}
+		\newcommand*\inlinegraphics[1]{%
+			\settototalheight\myheight{Xygp}%
+			\settodepth\mydepth{Xygp}%
+			\raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
+		}
+	
+% Specific changes to this presentation:
+	\usetheme[progressbar = none, block = fill]{metropolis}
+	\definecolor{dache-red}{RGB}{208, 90, 87}
+	\setbeamercolor{progress bar}{fg=dache-red}
+	% Set text color
+	\setbeamercolor{normal text}{fg=black, bg=white}
+	% Set framtitle color
+	\setbeamercolor{frametitle}{bg=white, fg=black}
+	% Change dark theme for first and last frame
+	\definecolor{dache-background}{RGB}{217, 217, 217}
+	\makeatletter
+	\renewcommand{\metropolis@colors@dark}{%
+		\setbeamercolor{normal text}{%
+			fg=black,
+			bg=dache-background
+		}%
+		\usebeamercolor[fg]{normal text}%
+	}
+	\makeatother
+	
+% DaCHE logo on title page
+\titlegraphic{%
+	% Upper right
+	\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt,yshift=-.90cm,xshift=-.90cm] at (current page.north east){\includegraphics[height=1.5cm]{pictures/DaCHE-profilbillede-round.png}};	
+	% Lower left
+	\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt,yshift=.45cm,xshift=1.43cm] at (current page.south west){\includegraphics[height=.98cm]{pictures/SDU-DaCHE-dk-2.png}};	
+}
+
+% DaCHE logo on rest of slides
+\addtobeamertemplate{frametitle}{}{%
+	% Upper right
+	\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt,yshift=-.5cm,xshift=-.5cm] at (current page.north east){\includegraphics[height=.98cm]{pictures/DaCHE-profilbillede-round.png}};	
+	% Lower left
+	\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt,yshift=.45cm,xshift=1.43cm] at (current page.south west){\includegraphics[height=.98cm]{pictures/SDU-DaCHE-dk-2.png}};
+}
+\addtobeamertemplate{section page}{%
+	% Upper right
+	\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt,yshift=-.5cm,xshift=-.5cm] at (current page.north east){\includegraphics[height=.98cm]{pictures/DaCHE-profilbillede-round.png}};	
+	% Lower left
+	\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt,yshift=.45cm,xshift=1.43cm] at (current page.south west){\includegraphics[height=.98cm]{pictures/SDU-DaCHE-dk-2.png}};
+}
+	
+	% Change font
+	\renewcommand{\familydefault}{\sfdefault}

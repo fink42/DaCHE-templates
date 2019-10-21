@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                Preamble                                  %%%
+%%%                             Version: 1.00                                %%%
+%%% 																		 %%%
+%%% 					DaCHE LaTeX template UK 16:9 						 %%%
+%%%                       Author: Nicolai Simonsen                           %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Documentclass
+\documentclass[aspectratio=169]{beamer} % Add [handout] to disable overlays
+
+% Packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{dcolumn}
+\usepackage{float}
+\usepackage{graphicx,calc}
+\usepackage{helvet}
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{natbib}
+\usepackage{pifont}
+\usepackage{pgfpages}
+\usepackage{subcaption}
+\usepackage{textpos}
+\usepackage{threeparttable}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage{xfrac}
+% Tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes.multipart}
+
+% Notes (Used for enabling and disabling notes on second screen)
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+% Changes for DaCHE template
+\input{./template/dache_template_uk_wide}
+
+
+% Start of the presentation ----------------------------------------------------
+%Information to be included in the title page:
+\title{DaCHE templates}
+\subtitle{PowerPoint and \LaTeX}
+\author{\small Dorte Gyrd-Hansen}
+\institute{%DaCHE - Danish Centre for Health Economics \\
+	%University of Southern Denmark\\
+	{\scriptsize } Strategy workshop 2019, Odense, Denmark\\
+	Joint work with Nicolai Fink Simonsen and Anne Sophie Oxholm
+}
+\date{\today}
+
+\begin{document}
+	
+	%%%%% Title page %%%%%
+	{
+		\metroset{background=dark}
+		\begin{frame}
+			\titlepage
+			
+			\note{
+				\begin{itemize}
+					\item This is a note
+				\end{itemize}
+			}
+			
+		\end{frame}
+	}
+	
+	\section{First section}
+	
+	
+	%% New Frame %%
+	\begin{frame}{Aim}
+		
+		\begin{itemize}
+			\item Strengthen the DaCHE brand 
+			\item Reduce workload for DaCHE employees
+			\item Improve DaCHE employees presentations
+		\end{itemize}
+		
+		\note{
+			\begin{itemize}
+				\item My own notes
+		\end{itemize}}
+		
+	\end{frame}
+	
+	
+	%% New Frame %%
+	\begin{frame}{Templates}
+		\begin{itemize}
+			\item Access the templates
+			\begin{itemize}
+				\item DaCHE's PF-drive
+				\item DaCHE's sharepoint
+			\end{itemize}
+			\item Choose different formats
+			\begin{itemize}
+				\item Danish (DK)/English (UK)
+				\item Wide/standard frame
+				\item PowerPoint/LaTeX
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	
+	%% Last Frame ------------------------------------------------------------------
+	{
+		\metroset{background=dark}
+		
+		\begin{frame}
+			\begin{minipage}{\linewidth}
+				\LARGE \textbf{Thank you for your attention!}
+			\end{minipage}
+			
+			{
+				\setlength{\fboxrule}{0pt}
+				\fboxsep=0pt
+				\noindent\fbox{
+					\begin{minipage}{.65\linewidth}
+						\rule[-.9cm]{10mm}{1pt}\\
+						{\scriptsize Dorte Gyrd-Hansen}\\
+						\scriptsize{\inlinegraphics{pictures/envelope-regular.png} \quad dgh@sdu.dk}\\[1mm]
+						\scriptsize{\inlinegraphics{pictures/twitter-brands.png} \quad \href{http://twitter.com/DorteGyrd}{@DorteGyrd}}\\[1mm]
+						\scriptsize{\inlinegraphics{pictures/globe-solid.png} \quad \url{https://portal.findresearcher.sdu.dk/en/persons/dgh}}
+						
+						\rule[-.8cm]{10mm}{1pt}\\
+						{\scriptsize Danish Centre for Health Economics - DaCHE}\\
+						\scriptsize{\inlinegraphics{pictures/twitter-brands.png} \quad \href{http://twitter.com/DaCHE_SDU}{@DaCHE\_SDU}}\\[1mm]
+						\scriptsize{\inlinegraphics{pictures/globe-solid.png} \quad \href{http://dache.dk}{dache.dk}}\\[1mm]
+						
+						% SDU lower left
+						\begin{textblock*}{100mm}(-0.89cm,0.99cm)
+							\includegraphics[height=.98cm]{pictures/SDU-DaCHE-uk-2.png}
+						\end{textblock*}
+					\end{minipage}\quad
+					
+					\begin{minipage}{.3\linewidth}
+						\begin{figure}
+							\centering
+							\includegraphics[width=0.98\linewidth]{pictures/DaCHE-profilbillede-round}
+						\end{figure}
+						
+					\end{minipage}
+				}
+			}
+			
+			
+			
+		\end{frame}
+	}
+	
+	
+	
+	
+	
+	
+	%%%%%%%%References%%%%%%%%%
+	\bibliographystyle{apalike}
+	\bibliography{bibliography/bibliography.bib} % Path to bibliography file
+	
+	
+	
+\end{document}
